@@ -1,5 +1,16 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% File      : ring.erl
+%%% Author    : Duncan Sparrell
+%%% Copyright : 2015 Duncan Sparrell
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 -module(ring).
--export( [ start/2, stop/0, listen/1 ] ).
+
+%% API functions
+-export( [ start/2, stop/0 ] ).
+
+%% remote execution functions
+-export( [ listen/1 ] ).
 
 start(N, M) when ( (N > 0) and (M > 0) )->
 	io:format("init N=~p and M=~p~n", [N,M] ),
