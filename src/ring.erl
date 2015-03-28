@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% File      : ring.erl
-%%% Author    : Duncan Sparrell
+%%% Author    : Duncan Sparrell duncan@sfractal.com
 %%% Copyright : 2015 Duncan Sparrell
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
