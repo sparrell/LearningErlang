@@ -1,5 +1,13 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% File      : ring.erl
+%%% Author    : Duncan Sparrell duncan@sfractal.com
+%%% Copyright : 2015 Duncan Sparrell
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 -module(mysum).
 -export( [ sum/1,sum_interval/2, create/1, reverse_create/1, print/1, even_print/1 ] ).
+
+-include_lib("eunit/include/eunit.hrl").
 
 sum(N) when N > 0 -> sum(N, 0);
 sum(0) -> 0.
@@ -39,3 +47,13 @@ even_printAll( [Next | Rest ] ) when (Next rem 2 == 0) ->
 	even_printAll(Rest);
 even_printAll( [_ | Rest ] ) ->
 	even_printAll(Rest).
+
+
+-ifdef(TEST).
+
+reverse_nil_test() -> [] = lists:reverse([]).
+reverse_one_test() -> [1] = lists:reverse([1]).
+reverse_two_test() -> [2,1] = lists:reverse([1,2]).
+
+-endif.
+
