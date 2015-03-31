@@ -6,6 +6,10 @@
 
 -module(ring).
 
+-ifdef(TEST).
+-include_lib("eunit/include/eunit.hrl").
+-endif.
+
 %% API functions
 -export( [ start/2, stop/0 ] ).
 
@@ -54,3 +58,14 @@ listen(IamNode) ->
 		stop  ->
 			io:format("master = ~p is finishing~n", [self()] )
 	end.
+
+-ifdef(TEST).
+
+reverse_nil_test() -> [] = lists:reverse([]).
+reverse_one_test() -> [1] = lists:reverse([1]).
+reverse_two_test() -> [2,1] = lists:reverse([1,2]).
+
+
+
+-endif.
+
