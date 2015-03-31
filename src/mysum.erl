@@ -60,6 +60,7 @@ sum_1_test() -> 1 = sum(1).
 sum_2_test() -> 3 = sum(2).
 sum_3_test() -> 6 = sum(3).
 sum_4_test() -> 10 = sum(4).
+sum_neg_test() -> ?assertError(function_clause, sum(-1)).
 
 -endif.
 
