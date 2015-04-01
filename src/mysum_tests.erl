@@ -6,6 +6,9 @@
 
 -module(mysum_tests).
 
+%% so I remember to include debug info - remove if going to production
+-compile([debug_info).
+
 -include_lib("eunit/include/eunit.hrl").
 
 
